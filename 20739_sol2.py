@@ -1,5 +1,5 @@
-# import sys
-# sys.stdin=open('sample_in2.txt')
+import sys
+sys.stdin=open('sample_in2.txt')
 #
 T=int(input())
 for tc in range(1, T+1):
@@ -12,7 +12,7 @@ for tc in range(1, T+1):
     max_count_lst=[]
 
      #  N:행  M:열
-    # 가로 탐색
+    #가로 탐색
     for i in range(N):
         for j in range(M):
             while j<M and arr[i][j]==1:
@@ -36,6 +36,7 @@ for tc in range(1, T+1):
                 max_count = count
                 max_count_lst.append(max_count)
             count=0
+
     max=0
     for i in range(len(max_count_lst)):
         if max_count_lst[i] > max:
@@ -45,4 +46,4 @@ for tc in range(1, T+1):
 
     print(f'#{tc} {max}')
 
-while로 푼거 틀렸음, 아직 못고침,
+# while로 푼거 틀렸음, 아직 못고침,
