@@ -1,6 +1,5 @@
 import sys
 sys.stdin=open('sample_input (2).txt')
-
 #상자 한개씩 색칠하는 개념으로 풀기
 #주어진 정보에서 같은 색인 영역은 겹치지 않는다는게 중요
 
@@ -19,5 +18,50 @@ for tc in range(1, T+1):
                 if arr[i][j]==3:   #상자에 (빨1+파2==3) 겹쳐진 부분있으면 개수 세기
                     count+=1
     print(f'#{tc} {count}')
+
+
+
+T=int(input())
+for tc in range(1,T+1):
+    N =int(input())
+    arr = [[0]*10 for _ in range(10)]
+    count=0
+    for _ in range(N):
+        r1, c1, r2, c2, color = map(int, input().split())
+        for i in range(r1, r2+1):
+            for j in range(c1, c2+1):
+                arr[i][j] += color
+                if arr[i][j] == 3:
+                    count += 1
+
+    print(f'#{tc} {count}')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
