@@ -11,25 +11,27 @@ for tc in range(1,11):
 
     #가로탐색
     for i in range(100):
-        str = ''
+        # str = ''
         for j in range(100):
-                k=0
+                k =0
+                str = ''
                 for k in range(100):
-                    if j+k < 99:
+                    if j+k <= 99:
                         str += arr[i][j + k]
-                        k += 1
+                        # k += 1
                         if str == str[::-1]:
                             if max_len < len(str):
                                 max_len = len(str)
     #세로 탐색
     for j in range(100):
-        str = ''
+        # str = ''
         for i in range(100):
             k=0
+            str = ''
             for k in range(100):
-                if i+k < 99:
+                if i+k <= 99:
                     str += arr[i+k][j]
-                    k += 1
+                    # k += 1
                     if str == str[::-1]:
                         if max_len < len(str):
                             max_len = len(str)
